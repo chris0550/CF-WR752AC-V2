@@ -30,7 +30,7 @@ if [ "$password1" != "$password2" ]; then
     echo "Password do not match"
     exit 1
 fi
-passwordHash=$(openssl passwd -1 $2)
+passwordHash=$(openssl passwd -1 $password1)
 
 #Update firmware
 mkdir -p /tmp/CFWR752AC_fw
